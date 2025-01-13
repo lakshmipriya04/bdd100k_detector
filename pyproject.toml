@@ -1,0 +1,21 @@
+[project]
+name = "bdd100k-detector"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "data-gradients>=0.3.2",
+    "fiftyone>=1.2.0",
+    "ipywidgets>=8.1.5",
+    "matplotlib>=3.10.0",
+    "nbformat>=5.10.4",
+    "opencv-python>=4.10.0.84",
+    "plotly>=5.24.1",
+    "python-dotenv>=1.0.1",
+    "seaborn>=0.13.2",
+    "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "tqdm>=4.67.1",
+    "ultralytics>=8.3.23",
+]
