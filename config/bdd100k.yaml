@@ -1,0 +1,18 @@
+path: /home/jl_fs/bdd100k_detector/data/raw/bdd100k
+train: images/100k/train
+val: images/100k/val
+test: null
+names:
+  0: bicycle
+  1: bus
+  2: car
+  3: motorcycle
+  4: other person
+  5: other vehicle
+  6: pedestrian
+  7: rider
+  8: traffic light
+  9: traffic sign
+  10: trailer
+  11: train
+  12: truck

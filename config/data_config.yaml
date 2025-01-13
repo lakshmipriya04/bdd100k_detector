@@ -1,0 +1,6 @@
+train_label: "${TRAIN_LABEL_PATH:/home/jl_fs/bdd100k_detector/data/inter/det_20/det_train.json}"
+val_label: "${VAL_LABEL_PATH:/home/jl_fs/bdd100k_detector/data/inter/det_20/det_val.json}"
+train_images: "${TRAIN_IMAGES_PATH:/home/jl_fs/bdd100k_detector/data/raw/bdd100k/images/100k/train}"
+val_images: "${VAL_IMAGES_PATH:/home/jl_fs/bdd100k_detector/data/raw/bdd100k/images/100k/val}"
+train_csv: "${TRAIN_CSV_PATH:/home/jl_fs/bdd100k_detector/data/processed/bdd100k/train.csv}"
+val_csv: "${VAL_CSV_PATH:/home/jl_fs/bdd100k_detector/data/processed/bdd100k/val.csv}"
