@@ -1,0 +1,32 @@
+# Environment variables go here, can be read by `python-dotenv` package:
+#
+#   `src/script.py`
+#   ----------------------------------------------------------------
+#    import dotenv
+#
+#    project_dir = os.path.join(os.path.dirname(__file__), os.pardir)
+#    dotenv_path = os.path.join(project_dir, '.env')
+#    dotenv.load_dotenv(dotenv_path)
+#   ----------------------------------------------------------------
+#
+# DO NOT ADD THIS FILE TO VERSION CONTROL!
+PROJECT_ROOT=/home/jl_fs/bdd100k_detector
+MODEL_NAME=yolo11s.pt
+RUNS_DIR=/home/jl_fs/bdd100k_detector/runs
+NUM_EPOCHS=20
+IMGSZ=416
+RESUME=
+PATIENCE=5
+BATCH=32
+SAVE_PERIOD=5
+PROJECT=bdd100_detector
+FRACTION=1.0
+WARMUP_EPOCHS=3
+PLOTS=True
+SHUFFLE=True
+CONFIDENCE_THRESHOLD=0.3
+IMAGES_SAVE_PATH=/home/jl_fs/bdd100k_detector/reports/figures
+DATA_CONFIG_PATH=/home/jl_fs/bdd100k_detector/config/data_config.yaml
+YOLO_CONFIG_PATH=/home/jl_fs/bdd100k_detector/config/bdd100k.yaml
+EXPERIMENT_NAME=bdd100ktrain
+MODEL_PATH=/home/jl_fs/bdd100k_detector/models/best.pt
