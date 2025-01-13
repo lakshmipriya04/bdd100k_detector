@@ -38,7 +38,7 @@ source .venv/bin/activate
 pip install requirements.txt
 ```
 
-Setup .env file with necessary required arguments
+Setup .env file with necessary required arguments similar to .envsample file
 ## How to run:
 
 ### 1. Perform Data Analysis
@@ -73,7 +73,7 @@ Alternatively train can be invoked from python script
 
 ```commandline
 cd src
-python main.py --yolo_config_path config/bdd100k.yaml --num_epochs 50 --batch -1 --project bdd_100k_detect --data_config_path config/data_config.yaml
+python main.py --yolo_config_path config/bdd100k.yaml --num_epochs 50 --batch -1 --project bdd_100k_detect --data_config_path config/data_config.yaml --cmd --train
 ```
 
 or
