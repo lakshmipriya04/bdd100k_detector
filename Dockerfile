@@ -41,8 +41,9 @@ COPY . /app
 # Set an environment variable (sample variable, modify as needed)
 ENV SAMPLE_ENV_VARIABLE=production
 
-# Change to the src directory
-WORKDIR /app/src
+COPY ./srcipts/entrypoint /entrypoint
+RUN sed -i 's/\r$//g' /entrypoint
+RUN chmod +x /entrypoint
 
-# Command to run the main.py file
-CMD ["python3", "main.py"]
+ENTRYPOINT ["/entrypoint"]
+

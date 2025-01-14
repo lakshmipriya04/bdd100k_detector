@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  detector:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bdd100k_detector
+    env_file:
+      - .env  # Automatically loads all environment variables from .env file
+    volumes:
+      - ./srcipts:/app/srcipts
+      - ./:/home/jl_fs/bdd100k_detector
+    runtime: nvidia
+    command: /entrypoint
+    tty: true
