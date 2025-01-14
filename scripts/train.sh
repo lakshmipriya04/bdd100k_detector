@@ -14,4 +14,4 @@ cd ..
 cd src
 
 # Run the Python script
-python main.py
+python main.py --train
