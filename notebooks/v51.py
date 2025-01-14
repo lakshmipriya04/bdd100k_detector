@@ -1,5 +1,4 @@
 import fiftyone as fo
-import fiftyone.zoo as foz
 import fiftyone.utils.yolo as fouy
 
 name = "bdd100k"
@@ -9,7 +8,7 @@ dataset_dir = "/home/jl_fs/bdd100k_detector/data/raw/bdd100k/"
 splits = ["val"]
 
 # Load the dataset, using tags to mark the samples in each split
-dataset = fo.Dataset(name,overwrite=True)
+dataset = fo.Dataset(name,persistent=True,overwrite=True)
 for split in splits:
     dataset.add_dir(
         dataset_dir=dataset_dir,
@@ -18,17 +17,15 @@ for split in splits:
         tags=split,
         labels_path=f'/home/jl_fs/bdd100k_detector/data/raw/bdd100k/labels/100k/{split}',
         label_field="ground_truth"
-)
-classes= ['bicycle', 'bus', 'car', 'motorcycle', 'other person', 'other vehicle', 'pedestrian', 'rider', 'traffic light', 'traffic sign', 'trailer', 'train', 'truck']
+    )
+classes = ['bicycle', 'bus', 'car', 'motorcycle', 'other person', 'other vehicle', 'pedestrian', 'rider',
+           'traffic light', 'traffic sign', 'trailer', 'train', 'truck']
 fouy.add_yolo_labels(
     dataset,
     "predictions",
-    "/home/jl_fs/bdd100k_detector/runs/bdd100_detector/output_predictions3/labels",
+    "/home/jl_fs/bdd100k_detector/runs/bdd100_detector/validation_predictions/labels",
     classes
 )
-# dataset = fo.load_dataset(name)
-# counts = dataset.count_values("ground_truth.detections.label")
-# classes = sorted(counts, key=counts.get, reverse=True)[:10]
 
 results = dataset.evaluate_detections(
     "predictions",
