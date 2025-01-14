@@ -38,6 +38,16 @@ source .venv/bin/activate
 pip install requirements.txt
 ```
 
+or using Docker
+```
+# Make sure to create .env file like sample .envsample
+docker build -t bdd_detector .
+docker run --gpus all -dit --env-file .env -v $(pwd):/home/jl_fs/bdd100k_detector my_image_name /bin/bash
+# If we directly want to execute the code - make sure to have data in current location
+docker run -d --name my_container_name -v $(pwd):/app --env-file .env --gpus all my_image_name python3 src/main.py
+
+```
+
 Setup .env file with necessary required arguments similar to .envsample file
 ## How to run:
 
